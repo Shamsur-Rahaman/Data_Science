@@ -1,161 +1,99 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Dec 19 09:48:46 2020
+Created on Wed Jun  3 09:19:37 2020
 
 @author: Shamsur Rahaman
- 
-# 02_Fundamentals of python
- Topics : list, slicing, tuple, function, package, slicing_array
- 
 """
+list = [1,2,3,4,5,6,7,8,9,10]
 
-# -----------list -------------
-# 1 
-mylist = [1,2,3,4,5,6]
-print(mylist)
-type(mylist)
+list.append(a)
+# Add an element at the end of the list
 
-# 2
-l2 = ['hello', 23, True, 3.9]
-print(l2)
-type(l2)
+list.insert(i,x)
+# Add an element x, in a given position i
 
-# 3 
-range(0, 15)
-l3 = list(range(0, 15))
-print(l3)
-type(l3)
+list.extend()
+# Extend the list by adding all the element from iteration
 
-# 4
-range(0, 15)
-l3 = list(range(0, 15, 2))
-print(l3)
-type(l3)
+list.clear()
+# Delete all the element of the list
 
-# 5
-l4 = ['a','b','c','d','e']
-print(len(l4))
+list.copy()
+# Return a shallow copy of the list
 
-# ------ Slicing ----------
-l5 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
-print(l5[:])
-print(l5[1:])
-print(l5[2:7])
-print(l5[-8:7])
-print(l5[-8:-3])
-print(l5[2:9:2])
-print(l5[::3])
-print(l5[::-2])
+list.count(x)
+# The number of times x appear in the list
 
-# ------ Tuple(immutable list) ------------
-t = (345,55,142)
-a = t[0]
-b = t[1]
-print(a)
-print(b)
+list.index(value, [start,[stop]])
+# Return zero-based index in the list of the first item whose value is equal to x
 
-# ------ Function ------------
-range(10,20)
-list1 = list(range(10,20))
-print(list1)
-print(len(list1))
-print(type(list1))
-print(max(list1))
-print(min(list1))
+list.pop([index])
+# Remove an element from the list in a given position index, 
+# if no index is given, pop will remove the last element from the list  
 
-# ------ Package ----------
-# 1
-list2 = [1,2,3,4,5]
-import numpy as np
-na = np.array(list2)
-print(na)
+list.remove(value)
+# Remove an element from the end of the list
 
-# 2 
-b = np.array([12,15,'a',True])
-print(b)
-print(type(b))
+list.reverse()
+# Reverse the elements of the list
 
-# 3
-c = list2.pop()
-print(c)
-print(list2)
-print(na.mean())
+list.sort()
+# Sort the elements of the list
 
-# --------- Slicing Array -----------
-list3 = [14,15,12,1,100]
-print(list3)
-print(list3[1:])
-print(list3[0:2])
-print(list3[::2])
 
-array = np.array(list3)
-print(array)
-print(array[2:])
-print(array[2:4])
-print(array[:])
+# example of list methods
 
+fruits = ['apple','banana','pear','orange','kiwi']
 
+fruits.append("grape")
+fruits
 
+fruits.insert(4, "pinapple")
+fruits
 
+fruits.clear()
+fruits
 
 
+fruits = ['apple','banana','pear','orange','kiwi']
+fruits.copy()
+fruits
 
+fruits.index(4, [3,[5]])
+fruits
 
+fruits.pop(4)
+fruits
 
+fruits.pop()
+fruits
 
 
+fruits = ['apple','banana','pear','orange','kiwi']
 
+fruits.remove("pear")
+fruits
 
 
+fruits = ['apple','banana','pear','orange','kiwi']
 
+fruits.reverse()
+fruits
 
+fruits.sort()
+fruits
 
+### Using list as Stacks
 
+stack = [3,4,5]
+stack.append(6)
+stack
 
+print(stack.pop())
+stack
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(stack.pop(1))
+stack
 
 
